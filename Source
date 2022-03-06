@@ -11596,8 +11596,8 @@ function useCommand.changestyle()
 			output.Style = Enum.FrameStyle.RobloxSquare
 			dStyle = "squared"
 			updatesaves()
-		elseif arguments[2] == "queen" then
-			Enum.FrameStyle.queen
+--[[ 		elseif arguments[2] == "queen" then
+			Enum.FrameStyle.queen ]]
 		elseif arguments[2] == "blended" then
 			output.Style = Enum.FrameStyle.Custom
 			dStyle = "blended"
