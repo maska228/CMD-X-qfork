@@ -1,7 +1,7 @@
 ---------------------------------------|
 while not game:IsLoaded() or not game:GetService("CoreGui") or not game:GetService("Players").LocalPlayer or not game:GetService("Players").LocalPlayer.PlayerGui do wait() end
 -- Constraints: -----------------------|
-local ver = "1.9.9f"
+local ver = "1.9.9f-qfork"
 local cordCode = "https://discord.gg/JyzvQ6zdfg"
 ---------------------------------------|
 Parents = {[1] = game:GetService("CoreGui"):FindFirstChild("RobloxGui"), [2] = game:GetService("CoreGui"), [3] = game:GetService("Players").LocalPlayer.PlayerGui}
@@ -15,17 +15,17 @@ if PROTOSMASHER_LOADED and get_hidden_gui then getParent = get_hidden_gui() end
 local firetouchinterest = firetouchinterest or fake_touch or nil
 
 for _, v in pairs(Parents[1]:GetDescendants()) do
-	if v.Name == "holder" then 
-		v.Parent:Destroy() 
+	if v.Name == "holder" then
+		v.Parent:Destroy()
 	end
 end
 for _, v in pairs(Parents[2]:GetDescendants()) do
-	if v.Name == "holder" then 
-		v.Parent:Destroy() 
+	if v.Name == "holder" then
+		v.Parent:Destroy()
 	end
 end
 
-if game:GetService("UserInputService").VREnabled then 
+if game:GetService("UserInputService").VREnabled then
 	getParent = Parents[3]
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/projects/nexus_support.lua"))()
 end
@@ -65,7 +65,7 @@ end
 
 oldDrawing = Drawing
 newDrawing = {new = function(DrawingType)
-	if DrawingType == "Line" then 
+	if DrawingType == "Line" then
 		local line = {}
 		local line_object = Instance.new("Frame", sgui)
 		line_object.ZIndex = 3000
@@ -205,18 +205,18 @@ function createDrag(object)
 					end
 				end)
 			end
-		end) 
+		end)
 		_G.dragVars[object].mmoved = object.InputChanged:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseMovement then
 				_G.dragVars[object].mou = input
 			end
-		end) 
+		end)
 		object.InputEnded:Connect(function(input)
 			if input.UserInputType == Enum.UserInputType.MouseButton1 then
 				_G.dragVars[object].mouseDown = false
 				_G.dragVars[object].mmoved:Disconnect()
 				if _G.dragVars[object].mloo then _G.dragVars[object].mloo:Disconnect() end
-			end    
+			end
 		end)
 	end)
 	object.MouseLeave:Connect(function()
@@ -227,9 +227,9 @@ function createDrag(object)
 end
 
 function Stand(Text1,Text2,Text3,Text4,Text5,Text6,Btn)
-	if game:GetService("UserInputService").VREnabled then 
+	if game:GetService("UserInputService").VREnabled then
 		RunDude = true
-		return 
+		return
 	end
 	RunDude = false
 	LoadingFrame = Instance.new("Frame", getParent)
@@ -456,7 +456,7 @@ local Donors = {
 	["shifde"] = "2",
 	["RusskiSlavv"] = "2",
 	["xudet"] = "2",
-	
+
 	["overreaction"] = "Custom1",
 	["InternetSpeeds"] = "Custom2",
 	["TheChosenOne123"] = "Custom3",
@@ -757,16 +757,16 @@ AntiCheat = {
 }
 
 AntiCheat.Games = {
-	
+
 	[176053469] = function()
 		AntiCheat.CheckFocusBreak = true
 		Unnamed.Parent = Parents[3]
 	end,
-	
+
 	[4052062489] = function()
 		AntiCheat.AutoAntiKick = true
 	end,
-	
+
 	[5278850819] = function()
 		workspace.FallenPartsDestroyHeight = 0/0
 		AntiCheat.Attachment = "Sf"
@@ -1094,7 +1094,7 @@ entry.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
 entry.BorderSizePixel = 0
 entry.Position = UDim2.new(-0.0152380951, 0, 0.965582669, 0)
 entry.Size = UDim2.new(0, 525, 0, 38)
- 
+
 user.Name = "user"
 user.Parent = entry
 user.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1106,7 +1106,7 @@ user.Text = prompt
 user.TextColor3 = Color3.new(1, 0.333333, 0)
 user.TextSize = 16
 user.TextXAlignment = Enum.TextXAlignment.Right
- 
+
 cmd.Name = "cmd"
 cmd.Parent = cmdsu
 cmd.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1165,7 +1165,7 @@ output2.TextSize = 16
 output2.TextXAlignment = Enum.TextXAlignment.Left
 output2.TextWrapped = true
 output2.TextTruncate = Enum.TextTruncate.AtEnd
- 
+
 output3.Name = "output3"
 output3.Parent = output
 output3.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1179,7 +1179,7 @@ output3.TextSize = 16
 output3.TextXAlignment = Enum.TextXAlignment.Left
 output3.TextWrapped = true
 output3.TextTruncate = Enum.TextTruncate.AtEnd
- 
+
 output4.Name = "output4"
 output4.Parent = output
 output4.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1208,7 +1208,7 @@ output5.TextSize = 16
 output5.TextXAlignment = Enum.TextXAlignment.Left
 output5.TextWrapped = true
 output5.TextTruncate = Enum.TextTruncate.AtEnd
- 
+
 output6.Name = "output6"
 output6.Parent = output
 output6.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1222,7 +1222,7 @@ output6.TextSize = 16
 output6.TextXAlignment = Enum.TextXAlignment.Left
 output6.TextWrapped = true
 output6.TextTruncate = Enum.TextTruncate.AtEnd
- 
+
 output7.Name = "output7"
 output7.Parent = output
 output7.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1236,7 +1236,7 @@ output7.TextSize = 16
 output7.TextXAlignment = Enum.TextXAlignment.Left
 output7.TextWrapped = true
 output7.TextTruncate = Enum.TextTruncate.AtEnd
- 
+
 output8.Name = "output8"
 output8.Parent = output
 output8.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1250,7 +1250,7 @@ output8.TextSize = 16
 output8.TextXAlignment = Enum.TextXAlignment.Left
 output8.TextWrapped = true
 output8.TextTruncate = Enum.TextTruncate.AtEnd
- 
+
 output9.Name = "output9"
 output9.Parent = output
 output9.BackgroundColor3 = Color3.new(1, 1, 1)
@@ -1271,7 +1271,7 @@ function sFLY(vfly)
 	speedofthevfly = 1
 	while not cmdlp or not cmdlp.Character or not cmdlp.Character:FindFirstChild('HumanoidRootPart') or not cmdlp.Character:FindFirstChild('Humanoid') or not cmdm do
 		 wait()
-	end 
+	end
 	local T = cmdlp.Character.HumanoidRootPart
 	local CONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
 	local lCONTROL = {F = 0, B = 0, L = 0, R = 0, Q = 0, E = 0}
@@ -1493,10 +1493,10 @@ function findplr(args, tbl)
 		local tbl = cmdp:GetPlayers()
 		if args == "me" then
 			return cmdlp
-		elseif args == "random" then 
+		elseif args == "random" then
 			return tbl[math.random(1,#tbl)]
 		elseif args == "new" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v.AccountAge < 30 and v ~= cmdlp then
 					vAges[#vAges+1] = v
@@ -1504,7 +1504,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "old" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v.AccountAge > 30 and v ~= cmdlp then
 					vAges[#vAges+1] = v
@@ -1512,7 +1512,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "bacon" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v.Character:FindFirstChild("Pal Hair") or v.Character:FindFirstChild("Kate Hair") and v ~= cmdlp then
 					vAges[#vAges+1] = v
@@ -1520,7 +1520,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "friend" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
 					vAges[#vAges+1] = v
@@ -1528,7 +1528,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "notfriend" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if not v:IsFriendsWith(cmdlp.UserId) and v ~= cmdlp then
 					vAges[#vAges+1] = v
@@ -1536,7 +1536,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "ally" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v.Team == cmdlp.Team and v ~= cmdlp then
 					vAges[#vAges+1] = v
@@ -1544,7 +1544,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "enemy" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v.Team ~= cmdlp.Team then
 					vAges[#vAges+1] = v
@@ -1552,7 +1552,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "near" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v ~= cmdlp then
 					local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
@@ -1563,7 +1563,7 @@ function findplr(args, tbl)
 			end
 			return vAges[math.random(1,#vAges)]
 		elseif args == "far" then
-			local vAges = {} 
+			local vAges = {}
 			for _,v in pairs(tbl) do
 				if v ~= cmdlp then
 					local math = (v.Character:FindFirstChild("HumanoidRootPart").Position - cmdlp.Character.HumanoidRootPart.Position).magnitude
@@ -1573,7 +1573,7 @@ function findplr(args, tbl)
 				end
 			end
 			return vAges[math.random(1,#vAges)]
-		else 
+		else
 			for _,v in pairs(tbl) do
 				if v.Name:lower():find(args:lower()) or v.DisplayName:lower():find(args:lower()) then
 					return v
@@ -1588,7 +1588,7 @@ function findplr(args, tbl)
 		end
 	end
 end
- 
+
 function cmdnum(str)
 	return tonumber(str) ~= nil
 end
@@ -1889,7 +1889,7 @@ function CreateLabel(Name, Text)
 	sf.CanvasPosition = Vector2.new(0,sf.CanvasPosition.Y+tl.TextBounds.Y)
 	local size2 = sf.CanvasSize.Y.Offset
 	tl:TweenPosition(UDim2.new(0,3,0,alls), 'In', 'Quint', 0.5)
-	for i = 0,50 do 
+	for i = 0,50 do
 		wait(0.05)
 		tl.TextTransparency = tl.TextTransparency - 0.05
 	end
@@ -3837,7 +3837,7 @@ pcall(function()
 			if FLYING then
 				FLYING = false
 				if cmdlp.Character.Humanoid then
-					cmdlp.Character.Humanoid.PlatformStand = false 
+					cmdlp.Character.Humanoid.PlatformStand = false
 				end
 				sFLY()
 				speedofthefly = permflyspeed
@@ -3974,7 +3974,7 @@ function executeCommand(com)
 			end
 			opx("*",invalidString.." is not a valid command.")
 		end
-	end    
+	end
 end
 
 cmd.FocusLost:connect(function()
@@ -4471,7 +4471,7 @@ function useCommand.advertise()
 	while cmdAdvertise do
 		local str = "Get CMD X today! Best admin GUI, supports paid executors! type in cmd-x on google!"
 		sayremote:FireServer(str, "All")
-		wait(math.random(1, 6)) 
+		wait(math.random(1, 6))
 		local randomPlayer = cmdp:GetPlayers()[math.random(2,#cmdp:GetPlayers())]
 		cmdlp.Character.Humanoid:MoveTo(randomPlayer.Character.HumanoidRootPart.Position)
 		sayremote:FireServer(str, "All")
@@ -5101,7 +5101,7 @@ function useCommand.removeinworkspace()
 		end
 		opx("-","Removed in workspace "..getstring(2))
 	else
-		opx("*","2 arguments are required!")    
+		opx("*","2 arguments are required!")
 	end
 end
 
@@ -5125,7 +5125,7 @@ function useCommand.removeinnil()
 		end
 		opx("-","Removed in nil "..getstring(2))
 	else
-		opx("*","2 arguments are required!")    
+		opx("*","2 arguments are required!")
 	end
 end
 
@@ -5180,7 +5180,7 @@ function useCommand.resizehead()
 		cmdlp.Character.Head.Mesh:WaitForChild("OriginalSize")
 		for i,v in pairs(cmdlp.Character:GetDescendants()) do
 			if v:IsA("Vector3Value") and v.Name == "OriginalSize" then
-				v:Destroy()    
+				v:Destroy()
 			end
 		end
 		HumValues[i]:Destroy()
@@ -6888,7 +6888,7 @@ function useCommand.facefuck()
 				if ff == true then
 					ff = false
 					opx("-","Stopped facefucking/faceraping")
-					cmdlp.Character.Humanoid.Sit = false			
+					cmdlp.Character.Humanoid.Sit = false
 				return
 				else ff = true
 					opx("-","Facefucking/faceraping enabled")
@@ -6927,7 +6927,7 @@ function useCommand.facefuckanim()
 			if target.Character and target.Character:FindFirstChild('Humanoid') then
 				if ff2 == true then
 					ff2 = false
-					opx("-","Stopped facefucking/faceraping")				
+					opx("-","Stopped facefucking/faceraping")
 				return
 				else ff2 = true
 					opx("-","Facefucking/faceraping enabled")
@@ -7042,7 +7042,7 @@ function useCommand.follow()
 					opx("-","Follow/stalk disabled")
 				return
 				else Follow = true
-					opx("-","Follow/stalk enabled") 
+					opx("-","Follow/stalk enabled")
 				end
 				while Follow do
 					cmdlp.Character.HumanoidRootPart.CFrame=
@@ -7698,7 +7698,7 @@ end
 function useCommand.earrape()
 	opx("-","Played all workspace sounds")
 	for i,v in pairs(workspace:GetDescendants()) do
-		if v:IsA("Sound") then 
+		if v:IsA("Sound") then
 			v:Play()
 		end
 	end
@@ -7755,12 +7755,12 @@ end
 
 function useCommand.enableshiftlock()
 	cmdlp.DevEnableMouseLock = true
-	opx("-","Shift lock has been force enabled")    
+	opx("-","Shift lock has been force enabled")
 end
 
 function useCommand.disableshiftlock()
 	cmdlp.DevEnableMouseLock = false
-	opx("-","Shift lock has been force disabled")    
+	opx("-","Shift lock has been force disabled")
 end
 
 function useCommand.maxcamunlock()
@@ -7816,7 +7816,7 @@ function useCommand.cambobble()
 		else
 			cmdlp.Character.Humanoid.CameraOffset = cmdlp.Character.Humanoid.CameraOffset * 0.75
 		end
-	end 
+	end
 	while bobbleEffect do
 		wait()
 		updateBobbleEffect()
@@ -7969,7 +7969,7 @@ function useCommand.badges()
 			v.Parent.CFrame = cmdlp.Character.HumanoidRootPart.CFrame
 			v.CanCollide = false
 		end
-	end  
+	end
 end
 
 local bhopping = false
@@ -8039,9 +8039,9 @@ function useCommand.sitwalk()
 	opx("-","Sit walk enabled")
 	anims = cmdlp.Character.Animate
 	xNoSit = {
-		anims.idle:FindFirstChildOfClass("Animation").AnimationId, 
-		anims.walk:FindFirstChildOfClass("Animation").AnimationId, 
-		anims.run:FindFirstChildOfClass("Animation").AnimationId, 
+		anims.idle:FindFirstChildOfClass("Animation").AnimationId,
+		anims.walk:FindFirstChildOfClass("Animation").AnimationId,
+		anims.run:FindFirstChildOfClass("Animation").AnimationId,
 		anims.jump:FindFirstChildOfClass("Animation").AnimationId,
 		cmdlp.Character.Humanoid.HipHeight,
 	}
@@ -8807,7 +8807,7 @@ function Find()
 	Track = true
 	while wait() do
 		if Track then
-			Clear() 
+			Clear()
 			for i,v in pairs(cmdp:GetPlayers()) do
 				if v ~= cmdlp then
 					if v.Character and v.Character:FindFirstChild("Head") then
@@ -8855,7 +8855,7 @@ AimFor = "Head"
 function GetPlayer()
 	CollectingPositions = {}
 	PlrCollect = {}
-	Players1 = {} 
+	Players1 = {}
 	for i,v in pairs(cmdp:GetPlayers()) do
 		if v ~= cmdlp then
 			table.insert(Players1, v)
@@ -9514,7 +9514,7 @@ cmdp.PlayerAdded:connect(function(plr)
 			CreateLabel(plr.Name,msg)
 		end
 	end)
-end) 
+end)
 for i,v in pairs(cmdp:GetPlayers()) do
 	v.Chatted:connect(function(msg)
 		if logsEnabled == true and #msg < 200 then
@@ -9835,7 +9835,7 @@ function useCommand.gotopos()
 		if mathstuff then
 			gotoPosHead = mathstuff
 			updatesaves()
-			opx("-","GotoPosHead is now "..arguments[2].." "..arguments[3])			
+			opx("-","GotoPosHead is now "..arguments[2].." "..arguments[3])
 		else
 			opx("*","A proper preset is needed")
 		end
@@ -10206,7 +10206,7 @@ function useCommand.reverse()
 			hyro.Parent = rp
 			hyro.MaxTorque = Vector3.new(1000,1000,1000)
 			hyro.D = Vector3.new(0,0,0)
-  
+
 	  rp.CFrame = (rp.CFrame)
 			local number = reversesettings.delay+1
 			for count = 1, reversesettings.delay do
@@ -10265,7 +10265,7 @@ function useCommand.xraycamera()
 	opx("-","X-Ray camera enabled")
 	SavedCamera = {Max = cmdlp.CameraMinZoomDistance, Min = cmdlp.CameraMaxZoomDistance}
 	cmdlp.CameraMinZoomDistance = math.huge - math.huge
-	cmdlp.CameraMaxZoomDistance = math.huge - math.huge    
+	cmdlp.CameraMaxZoomDistance = math.huge - math.huge
 end
 
 function useCommand.unxraycamera()
@@ -10287,11 +10287,11 @@ function useCommand.emote()
             local emote_name = {unpack(arguments)}
             table.remove(emote_name, 1)
             emote_name = table.concat(emote_name, " ")
-            
+
 			lower = string.lower(emote_name)
 			for i,animid in pairs(animationlist) do
 				if lower == string.sub(string.lower(tostring(i)), 1, #lower) then
-					
+
 					animationdebounce = true
 					local Anim = Instance.new("Animation")
 					Anim.AnimationId = game:GetObjects("rbxassetid://"..animid)[1].AnimationId
@@ -10350,7 +10350,7 @@ function useCommand.forcebubblechat()
 					game:GetService("Chat"):Chat(plr.Character.Head,msg,Enum.ChatColor.White)
 				end
 			end)
-		end) 
+		end)
 		for i,v in pairs(cmdp:GetPlayers()) do
 			v.Chatted:connect(function(msg)
 				if fbc == true then
@@ -10493,14 +10493,14 @@ function useCommand.admindetect()
 		for i,v in pairs(adminTableS.N) do
 			adminTableS.N[i] = adminTableS.N[i]:gsub("-","")
 			adminTableS.N[i] = adminTableS.N[i]:sub(0,#adminTableS.N[i]-2)
-			for _,n in pairs(cmdp:GetPlayers()) do 
+			for _,n in pairs(cmdp:GetPlayers()) do
 				vID = n.UserId
 				z = string.find(adminTableS.N[i],vID)
 				if z ~= nil then
 					CreateADLabel(n.Name,"Staff | KOHLS")
 				end
 			end
-		end 
+		end
 		cmdp.PlayerAdded:Connect(function(plr)
 			for i,v in pairs(cmdrs:GetDescendants()) do
 				if v.Name == "log" then
@@ -10538,13 +10538,13 @@ end
 function useCommand.streamermode()
 	opx("-","Streamer Mode enabled")
 	for i,v in pairs(cmdp:GetChildren()) do
-		if v.Name ~= cmdlp.Name and v.Character and v.Character:FindFirstChild("Head") then 
+		if v.Name ~= cmdlp.Name and v.Character and v.Character:FindFirstChild("Head") then
 			local char = v.Character
 			local head = char:FindFirstChild('Head')
 			local m = Instance.new("Model", char) m.Name = ""
-			local cl = char.Head:Clone() cl.Parent = m 
-			local hum = Instance.new("Humanoid", m) 
-			hum.Name = "NameTag" 
+			local cl = char.Head:Clone() cl.Parent = m
+			local hum = Instance.new("Humanoid", m)
+			hum.Name = "NameTag"
 			hum.MaxHealth = v.Character.Humanoid.MaxHealth
 			wait()
 			hum.Health = v.Character.Humanoid.Health
@@ -10559,9 +10559,9 @@ function useCommand.streamermode()
 			local char = v
 			local head = char.Head
 			local m = Instance.new("Model", char) m.Name = ""
-			local cl = char.Head:Clone() cl.Parent = m 
-			local hum = Instance.new("Humanoid", m) 
-			hum.Name = "NameTag" 
+			local cl = char.Head:Clone() cl.Parent = m
+			local hum = Instance.new("Humanoid", m)
+			hum.Name = "NameTag"
 			hum.MaxHealth = char.Humanoid.MaxHealth
 			wait()
 			hum.Health = char.Humanoid.Health
@@ -10569,15 +10569,15 @@ function useCommand.streamermode()
 			local weld = Instance.new("Weld", cl) weld.Part0 = cl weld.Part1 = char.Head
 			char.Head.Transparency = 1
 		end)
-	end 
+	end
 	cmdp.PlayerAdded:Connect(function(v)
 		wait(2)
 		local char = v.Character
 		local head = char.Head
 		local m = Instance.new("Model", char) m.Name = ""
-		local cl = char.Head:Clone() cl.Parent = m 
-		local hum = Instance.new("Humanoid", m) 
-		hum.Name = "NameTag" 
+		local cl = char.Head:Clone() cl.Parent = m
+		local hum = Instance.new("Humanoid", m)
+		hum.Name = "NameTag"
 		hum.MaxHealth = char.Humanoid.MaxHealth
 		wait()
 		hum.Health = char.Humanoid.Health
@@ -12042,7 +12042,7 @@ function useCommand.sniper()
 			tool.GripPos = Vector3.new(0, -1, 0)
 			tool.GripRight = Vector3.new(-0.005, 0.004, -1)
 			tool.GripUp = Vector3.new(0.758, 0.653, -0.001)
-			tool.GripForward = Vector3.new(-0.653, 0.758, 0.006) 
+			tool.GripForward = Vector3.new(-0.653, 0.758, 0.006)
 			local hathandle = hat.Handle
 			hathandle:FindFirstChildOfClass("Weld"):Destroy()
 			hathandle.Parent = tool
@@ -12388,7 +12388,7 @@ function useCommand.refreshdead()
 		return opx("*", "Already active")
 	end
 	deadRefresh.pos = cmdlp.Character.HumanoidRootPart.CFrame
-	
+
 	deadRefresh.died = cmdlp.Character.Humanoid.Died:Connect(function()
 		deadRefresh.pos = cmdlp.Character.HumanoidRootPart.CFrame
 	end)
@@ -12477,16 +12477,16 @@ function useCommand.plague()
 	if arguments[2] then
 		opx("-","You started a plague!")
 		cureFound = false
-		plaguename = arguments[2] 
-		if #cmdp:GetPlayers() > 6 then  
-			for i,v in pairs(cmdp:GetPlayers()) do 
+		plaguename = arguments[2]
+		if #cmdp:GetPlayers() > 6 then
+			for i,v in pairs(cmdp:GetPlayers()) do
 				wait(math.random(1,15))
 				if i == 1 then
 					cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(v.Name.." is the ZeroDay of "..plaguename, "All")
 				elseif i == 2 then
 					cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(plaguename.." was put on the watchlist by RHO", "All")
-					cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(v.Name.." was infected by "..plaguename, "All")			
-				elseif i == #cmdp:GetPlayers()-3 then 
+					cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(v.Name.." was infected by "..plaguename, "All")
+				elseif i == #cmdp:GetPlayers()-3 then
 					randomss = math.random(1,2)
 					if randomss == 2 then
 						cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("A cure was found for "..plaguename.." RHO says it will be over soon", "All")
@@ -12494,7 +12494,7 @@ function useCommand.plague()
 					else
 						cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Roblox begins breaking down as "..plaguename.." infects the majority of the population", "All")
 					end
-				elseif i == #cmdp:GetPlayers() then 
+				elseif i == #cmdp:GetPlayers() then
 					if cureFound == false then
 						cmdrs.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("Roblox was completely infected by "..plaguename, "All")
 					else
@@ -12651,7 +12651,7 @@ end
 function useCommand.massage()
 	opx("-","Showing ages")
 	xAge = ""
-	for i,v in pairs(cmdp:GetPlayers()) do 
+	for i,v in pairs(cmdp:GetPlayers()) do
 		local Years = string.split(v.AccountAge/365,".")
 		xAge = xAge..v.Name.."(s) account is "..Years[1].." year(s) old or "..v.AccountAge.." day(s) old\n"
 	end
@@ -12661,7 +12661,7 @@ end
 function useCommand.massid()
 	opx("-","Showing IDs")
 	xID = ""
-	for i,v in pairs(cmdp:GetPlayers()) do 
+	for i,v in pairs(cmdp:GetPlayers()) do
 		xID = xID..v.Name.."s User ID is "..v.UserId.."\n"
 	end
 	opxL("User IDs",xID)
@@ -13557,7 +13557,7 @@ function useCommand.loopfling()
 				repeat wait(.1) until target.Character ~= nil and target.Character:FindFirstChild('HumanoidRootPart')
 			end
 		else
-			opx("*","Player does not exist!")    
+			opx("*","Player does not exist!")
 		end
 	else
 		opx("*","2 arguments are required!")
@@ -13797,8 +13797,8 @@ end
 NoPrompt = nil
 function useCommand.noprompt()
 	opx("-","No prompt enabled")
-	NoPrompt = game:GetService("CoreGui").PurchasePromptApp.ProductPurchase.ChildAdded:Connect(function(v) 
-		v:Destroy() 
+	NoPrompt = game:GetService("CoreGui").PurchasePromptApp.ProductPurchase.ChildAdded:Connect(function(v)
+		v:Destroy()
 	end)
 end
 
@@ -14348,7 +14348,7 @@ function useCommand.chaos()
 		end
 		wait(chaosspeed)
 	end
-end	
+end
 function useCommand.unchaos()
 	opx("-","Chaos mode is now off")
 	Chaos = false
@@ -14470,7 +14470,7 @@ end
 
 function useCommand.rejoinexecute()
 	if not syn.queue_on_teleport then
-		opx("*","queue_on_teleport is not supported on your executor!")    
+		opx("*","queue_on_teleport is not supported on your executor!")
 	end
 	rejoining = true
 	syn.queue_on_teleport([[
@@ -14643,7 +14643,7 @@ end
 function useCommand.unclickdetectormaxdistance()
 	opx("-","All click detectors no longer have max distance")
 	for _,v in pairs(cdMd) do
-		v.p.MaxActivationDistance = m 
+		v.p.MaxActivationDistance = m
 	end
 end
 
@@ -14955,7 +14955,7 @@ end
 
 function useCommand.rejoinrefresh()
 	if not syn.queue_on_teleport then
-		opx("*","queue_on_teleport is not supported on your executor!")    
+		opx("*","queue_on_teleport is not supported on your executor!")
 	end
 	rejoining = true
 	local c = cmdlp.Character.HumanoidRootPart.CFrame
@@ -14978,7 +14978,7 @@ end
 
 function useCommand.rejoinrefreshexecute()
 	if not syn.queue_on_teleport then
-		opx("*","queue_on_teleport is not supported on your executor!")    
+		opx("*","queue_on_teleport is not supported on your executor!")
 	end
 	rejoining = true
 	local c = cmdlp.Character.HumanoidRootPart.CFrame
@@ -15006,7 +15006,7 @@ function UpdateTracer()
 		v:Remove()
 	end
 	Lines = {}
-	for i,v in pairs(cmdp:GetPlayers()) do 
+	for i,v in pairs(cmdp:GetPlayers()) do
 		if v ~= cmdlp then
 			if v and v.Character ~= nil then
 				Head = v.Character:FindFirstChild("Head")
@@ -15119,8 +15119,8 @@ function useCommand.replicateanim()
 		return I
 	end
 	local Contains = function(Table,KV)
-		for K,V in next, Table do 
-			if rawequal(KV,K) or rawequal(KV,V) then 
+		for K,V in next, Table do
+			if rawequal(KV,K) or rawequal(KV,V) then
 				return true
 			end
 		end
@@ -15137,16 +15137,16 @@ function useCommand.replicateanim()
 		["Left Leg"] = Torso["Left Hip"],
 		["Right Leg"] = Torso["Right Hip"],
 	}
-	for K,V in next, Char:GetChildren() do 
-		if V:IsA("BasePart") then 
+	for K,V in next, Char:GetChildren() do
+		if V:IsA("BasePart") then
 			coroutine.wrap(function()
 				repeat V.CanCollide = false
-					game:GetService("RunService").Stepped:Wait() 
+					game:GetService("RunService").Stepped:Wait()
 				until cmdlp.Character.Humanoid.Health < 1
 			end)()
 		end
 	end
-	for K,V in next, Joints do 
+	for K,V in next, Joints do
 		local AP, AO, A0, A1 = Create("AlignPosition",V.Part1), Create("AlignOrientation",V.Part1), Create("Attachment",V.Part1), Create("Attachment",V.Part0)
 		AP.RigidityEnabled = true
 		AO.RigidityEnabled = true
@@ -15185,8 +15185,8 @@ function useCommand.replicateanim()
 	end
 	coroutine.wrap(function()
 		Humanoid.Died:Wait()
-		for K,V in next, cmdlp.Character:GetDescendants() do 
-			if V.Name:match("Align") then 
+		for K,V in next, cmdlp.Character:GetDescendants() do
+			if V.Name:match("Align") then
 				V:Destroy()
 			end
 		end
@@ -15197,7 +15197,7 @@ function useCommand.replicateanim()
 		local Class = {Speed = 1}
 		local Yield = function(Seconds)
 			local Time = Seconds * (Frame + Sequence:GetKeyframes()[#Sequence:GetKeyframes()].Time)
-			for I = 1,Time,Class.Speed do 
+			for I = 1,Time,Class.Speed do
 				game:GetService("RunService").Delta.Event:Wait()
 			end
 		end
@@ -15207,16 +15207,16 @@ function useCommand.replicateanim()
 			Class.Stopped = false
 			coroutine.wrap(function()
 				repeat
-					for K = 1,#Sequence:GetKeyframes() do 
+					for K = 1,#Sequence:GetKeyframes() do
 						local K0, K1, K2 = Sequence:GetKeyframes()[K-1], Sequence:GetKeyframes()[K], Sequence:GetKeyframes()[K+1]
 						if Class.Stopped ~= true and cmdlp.Character.Humanoid.Health > 0 then
-							if K0 ~= nil then 
+							if K0 ~= nil then
 								Yield(K1.Time - K0.Time)
 							end
 							coroutine.wrap(function()
-								for I = 1,#K1:GetDescendants() do 
+								for I = 1,#K1:GetDescendants() do
 									local Pose = K1:GetDescendants()[I]
-									if Contains(Joints,Pose.Name) then 
+									if Contains(Joints,Pose.Name) then
 										local Duration = K2 ~= nil and (K2.Time - K1.Time)/Class.Speed or .5
 										Edit(Char[Pose.Name],PoseToCF(Pose,Joints[Pose.Name]),Duration,Pose.EasingStyle,Pose.EasingDirection)
 									end
@@ -15234,11 +15234,11 @@ function useCommand.replicateanim()
 		Class.Reset = function()
 			coroutine.wrap(function()
 				wait(.02)
-				for K,V in next, Joints do 
+				for K,V in next, Joints do
 					local Part = Char[K]
-					if Part ~= nil then 
+					if Part ~= nil then
 						local Attachment = Part:FindFirstChild("CFAttachment0")
-						if Attachment ~= nil then 
+						if Attachment ~= nil then
 							Attachment.CFrame = V.C1 * V.C0:Inverse()
 						end
 					end
@@ -15315,7 +15315,7 @@ function useCommand.removeroot()
 end
 
 function useCommand.antifling()
-	if antifling == nil then 
+	if antifling == nil then
 		antifling = true
 	else
 		antifling = not antifling
@@ -15633,7 +15633,7 @@ function useCommand.chatprivacy()
 		return
 	end
 	opx("-","Set your Chat Privacy to "..arguments[2])
-	sethiddenproperty(cmdlp,"ChatPrivacyMode",Enum.ChatPrivacyMode[arguments[2]])    
+	sethiddenproperty(cmdlp,"ChatPrivacyMode",Enum.ChatPrivacyMode[arguments[2]])
 end
 
 function useCommand.masschatprivacy()
@@ -15802,7 +15802,7 @@ function useCommand.spoofgrouprole()
 	end
 	local xRole = "Owner"
 	if arguments[2] then
-		xRole = arguments[2]    
+		xRole = arguments[2]
 	end
 	opx("-","Spoofed role")
 	local mt = getrawmetatable(game)
@@ -15831,7 +15831,7 @@ function useCommand.unspoofgrouprole()
 	mt.__namecall = _G.rolehook
 	setreadonly(mt, true)
 	opx("-", "Spoof group role is now disabled.")
-	_G.rolehook = nil    
+	_G.rolehook = nil
 end
 
 function useCommand.nogameteleport()
@@ -15849,7 +15849,7 @@ function useCommand.nogameteleport()
 		end
 		return _G.gtphook(self, ...)
 	end)
-	setreadonly(mt, true)    
+	setreadonly(mt, true)
 end
 
 function useCommand.yesgameteleport()
@@ -15861,7 +15861,7 @@ function useCommand.yesgameteleport()
 	mt.__namecall = _G.gtphook
 	setreadonly(mt, true)
 	opx("-", "No game teleport is now disabled.")
-	_G.gtphook = nil   
+	_G.gtphook = nil
 end
 
 function useCommand.hotkeyflyhold()
@@ -16005,7 +16005,7 @@ function useCommand.spoofclientid()
 	setreadonly(mt, false)
 	local genid = arguments[2]
 	mt.__namecall = newcclosure(function(self, ...)
-		if getnamecallmethod() == 'GetClientId' then 
+		if getnamecallmethod() == 'GetClientId' then
 			return genid
 		end
 		return _G.clid(self, ...)
@@ -16024,7 +16024,7 @@ function useCommand.randomspoofclientid()
 	setreadonly(mt, false)
 	local genid = math.random(1,1000000000)
 	mt.__namecall = newcclosure(function(self, ...)
-		if getnamecallmethod() == 'GetClientId' then 
+		if getnamecallmethod() == 'GetClientId' then
 			return genid
 		end
 			return _G.clid(self, ...)
@@ -16265,7 +16265,7 @@ end
 user.Changed:connect(function()
 	user.Text = user.Text:sub(1,13)..">"
 end)
-cmd.Focused:connect(function() 
+cmd.Focused:connect(function()
 	local NumberOf = #History
 	cmduis.InputBegan:Connect(function()
 		if cmduis:IsKeyDown(Enum.KeyCode.LeftShift) and cmduis:IsKeyDown(Enum.KeyCode.Backspace) then
@@ -16285,7 +16285,7 @@ createDrag(tabs)
 
 ---------------------------------------|
 -- Themes: ----------------------------|
- 
+
 styleAS = dStyle:split(" ")
 
 function getAsset(ID)
@@ -16361,7 +16361,7 @@ elseif styleAS[1] == "bg" then
 	iBG.Image = getAsset(styleAS[2])
 	iBG.ScaleType = Enum.ScaleType.Crop
 end
- 
+
 ---------------------------------------|
 -- Chat hook: -------------------------|
 pcall(function()
@@ -16484,6 +16484,34 @@ function RGBDev(Player)
 	end)
 end
 
+--[[ if not _G.qdevcolor then
+	_G.qdevcolor = {Lettering = {}, Connections = {}}
+end
+
+function qdevcolor(Player)
+	name = Player.Name
+	if _G.qdevcolor.Connections[name] then return end
+	local plm = game:GetService("CoreGui").PlayerList:FindFirstChild("PlayerListMaster")
+	if not plm or not plm:FindFirstChild("OffsetUndoFrame", true) then
+		return
+	else
+		plm = plm:FindFirstChild("OffsetUndoFrame", true)
+	end
+	_G.qdevcolor.Connections[name] = game:GetService("RunService").RenderStepped:Connect(function()
+		for _,v in pairs(plm:GetDescendants()) do
+			if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Parent.Parent.Parent.Parent.Parent.Parent.Name == "p_"..Player.UserId then
+				if not _G.qdevcolor.Lettering[v] then
+					_G.qdevcolor.Lettering[v] = Instance.new("UIGradient", v)
+					v.TextColor3 = Color3.fromRGB(255 85 255)
+				v.Rotation = math.random(-1,1)
+				if qdevs[name] then
+					v.Parent.Parent.PlayerIcon.Image = "rbxasset://textures/ui/icon_admin-16.png"
+				end
+			end
+		end
+	end)
+end
+im gonna comment this out for now lol ]]
 function colorName(Player)
 	name = Player.Name
 	local plm = game:GetService("CoreGui").RobloxGui:FindFirstChild("PlayerListMaster")
@@ -16496,6 +16524,8 @@ function colorName(Player)
 			if Donors[name] then
 				if Tier[Donors[name]].Color == "RGBDev" then
 					RGBDev(name)
+-- 				elseif Tier[Donors[name]].Color == "qdev" then
+--					qdevcolor(name)
 				else
 					v.TextColor3 = Tier[Donors[name]].Color
 				end
@@ -16511,6 +16541,9 @@ for _,v in pairs(cmdp:GetPlayers()) do
 	elseif Donors[v.Name] then
 		opx("-",v.Name.." is in your server ("..Tier[Donors[v.Name]].Tag..")")
 		colorName(v)
+	elseif qdev[v.name] then
+		opx("-",v.Name.." is in your server ("..Devs[v.Name].." of CMD-X_qfork)")
+		colorqdev(v)
 	end
 end
 
@@ -16542,7 +16575,7 @@ while true do
 	)
 	local response = httpService:JSONDecode(game:HttpGet(requestString))
 	cursor = response.nextPageCursor
-	
+
 	for _, data in pairs(response.data) do
 		animationlist[data.name] = data.id
 	end
