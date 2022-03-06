@@ -16302,7 +16302,7 @@ elseif dStyle == "blended" then
 	output.Style = Enum.FrameStyle.Custom
 elseif dStyle == "smalled" then
 	output.Style = Enum.FrameStyle.DropShadow
-elseif dStlye == "queen" then
+--[[ elseif dStlye == "queen" then
 	entry.BackgroundColor3 = Color3.fromRGB(204, 68, 204)
 	output1.TextColor3 = Color3.fromRGB(1, 1, 1)
 	output2.TextColor3 = Color3.fromRGB(1, 1, 1)
@@ -16313,9 +16313,9 @@ elseif dStlye == "queen" then
 	output7.TextColor3 = Color3.fromRGB(1, 1, 1)
 	output8.TextColor3 = Color3.fromRGB(1, 1, 1)
 	output9.TextColor3 = Color3.fromRGB(1, 1, 1)
-	cmd.TextColor3 = Color3.fromRGB(1,1,1)
+	cmd.TextColor3 = Color3.fromRGB(204, 68, 204)
 	cmd.PlaceholderColor3 = Color3.fromRGB(1,1,1)
-	output.Style = Enum.FrameStyle.queen
+	output.Style = Enum.FrameStyle.queen ]]
 elseif dStyle == "lightblue" then
 	entry.BackgroundColor3 = Color3.fromRGB(170, 170, 170)
 	output1.TextColor3 = Color3.fromRGB(1, 1, 1)
