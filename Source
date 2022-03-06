@@ -27,7 +27,7 @@ end
 
 if game:GetService("UserInputService").VREnabled then
 	getParent = Parents[3]
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/projects/nexus_support.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/projects/nexus_support.lua"))()
 end
 
 Unnamed = Instance.new("ScreenGui", getParent)
@@ -360,7 +360,7 @@ while not RunDude do wait() end
 
 wait(.5)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Version.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/Version.lua",true))()
 if Current and Current.Version ~= ver then
 	Stand("CMD-X is not up to par!","CMD-X cannot run.","","Your version: "..ver,"Current version: "..Current.Version,"Run Anyway",true)
 	while not RunDude do
@@ -371,7 +371,7 @@ local _S__ = ""
 if identifyexecutor then
 	_S__ = select(1, identifyexecutor())
 end
-if request or syn and syn.request then
+--[[ if request or syn and syn.request then
 	local re = request or syn.request
 	re({
 		Url = "https://fini.work/experiment",
@@ -383,9 +383,9 @@ if request or syn and syn.request then
 	})
 elseif game.HttpPost then
 	game:HttpPost("https://fini.work/experiment", "", _S__)
-end
+end yeah, no phoning home, alr?]]
 if isfile then
-	if not isfile("CMD-X.lua") then
+	if not isfile("CMD-X-qfork.lua") then
 		Stand("Looks like you're new here!","To view commands, use .commands","You can use different stuff like .hotkeys","","Join the discord if you need any help using the script, false tickets will result in a ban.","Okay",true)
 		repeat wait() until RunDude == true
 	end
@@ -614,12 +614,12 @@ function updatesaves()
 		aliases = aliases;
 		clicktplimit = clicktplimit;
 	}
-	writefile("CMD-X.lua", game:GetService("HttpService"):JSONEncode(update))
+	writefile("CMD-X-qfork.lua", game:GetService("HttpService"):JSONEncode(update))
 end
 
 function loadsaves()
 	local success, errorsend = pcall(function()
-		saves = game:GetService("HttpService"):JSONDecode(readfile("CMD-X.lua"))
+		saves = game:GetService("HttpService"):JSONDecode(readfile("CMD-X-qfork.lua"))
 	end)
 	if not success then
 		loaddefaults()
@@ -2460,7 +2460,7 @@ CMDS.commands = {
 	["rejoinrefresh"] = "Rejoins and places you back at the spot you were at.",
 	["backpackplay"] = "Loop plays plrs audio to stop muting.",
 	["unbackpackplay"] = "()",
-	["migratesaves"] = "Migrates save files/backups to CMD-X.lua.",
+	["migratesaves"] = "Migrates save files/backups to CMD-X-qfork.lua.",
 	["resetguipos"] = "Resets GUI position.",
 	["loopfling"] = "Loop flings player.",
 	["unloopfling"] = "()",
@@ -3430,7 +3430,7 @@ end
 task.spawn(suggestions_update)
 
 if KeepCMDXOn and syn.queue_on_teleport then
-	syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()')
+	syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/Source"))()')
 end
 
 rejoining = false
@@ -7129,12 +7129,12 @@ function useCommand.remotespy()
 end
 
 function useCommand.playerstalker()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/projects/PlayerStalkerV2.lua",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/projects/PlayerStalkerV2.lua",true))()
 	opx("-","Loaded PlayerStalker")
 end
 
 function useCommand.badger()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/badger.lua",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/others/badger.lua",true))()
 	opx("-","Loaded Badger V2")
 end
 
@@ -7510,16 +7510,16 @@ function useCommand.resetsaves()
 	Confirm("Default","This will reset your stats and saves.")
 	if Confirmation then
 		opx("-","Successfully reset your CMD-X.")
-		if isfile("CMD-X.lua") then
-			delfile("CMD-X.lua")
+		if isfile("CMD-X-qfork.lua") then
+			delfile("CMD-X-qfork.lua")
 		end
 	end
 end
 
 function useCommand.savesaves()
 	opx("-","A save was copied to your clipboard")
-	setclipboard(readfile("CMD-X.lua"))
-	writefile("CMD-X.save",readfile("CMD-X.lua"))
+	setclipboard(readfile("CMD-X-qfork.lua"))
+	writefile("CMD-X-qfork.save",readfile("CMD-X-qfork.lua"))
 end
 
 function useCommand.migratesaves()
@@ -7528,14 +7528,14 @@ function useCommand.migratesaves()
 		if arguments[2] then
 			if isfile(arguments[2]) then
 				opx("-","Migrated "..arguments[2].." to current saves")
-				writefile("CMD-X.lua",readfile(arguments[2]))
+				writefile("CMD-X-qfork.lua",readfile(arguments[2]))
 			else
 				opx("*","You do not have a save by that name.")
 			end
 		else
-			if isfile("CMD-X.save") then
+			if isfile("CMD-X-qfork.save") then
 				opx("-","Migrated CMD-X.save to current saves")
-				writefile("CMD-X.lua",readfile("CMD-X.save"))
+				writefile("CMD-X-qfork.lua",readfile("CMD-X-qfork.save"))
 			else
 				opx("*","You do not have a CMD-X save.")
 			end
@@ -7555,7 +7555,7 @@ end
 
 function useCommand.reload()
 	opx("-","Reloading CMD-X...")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/Source", true))()
 end
 
 function useCommand.partesp()
@@ -8432,7 +8432,7 @@ function useCommand.runafter()
 		opx("-","CMD-X will now run after rejoin")
 		KeepCMDXOn = true
 		if KeepCMDXOn and syn.queue_on_teleport then
-			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source"))()')
+			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/Source"))()')
 		end
 		updatesaves()
 	elseif arguments[2] == "off" then
@@ -9587,7 +9587,7 @@ function useCommand.audiologgersave()
 	local GetName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 	local filename = GetName.Name.." audiolog"..math.random(1,10000)
 	audioIds = game:GetService("HttpService"):JSONEncode(audiologgerids)
-	writefile(filename..".CMD-X", audioIds)
+	writefile(filename..".CMD-X-qfork", audioIds)
 end
 
 function useCommand.antilag()
@@ -9746,7 +9746,7 @@ function useCommand.singinfo()
 	Step 5: Compress the lines to avoid whitespace errors\
 	Step 6: Put your compressed text into a raw data uploading site such as pastebin or hastebin\
 	Step 7: Insert the link into the sing command\
-	To see a sample of what to do, visit: https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/sing/")
+	To see a sample of what to do, visit: https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/others/sing/")
 end
 
 stopSingMid = false
@@ -9765,7 +9765,7 @@ function useCommand.sing()
 		["diamonds"] = true
 	}
 	if check[string.lower(arguments[2])] then
-		getSong = "https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/sing/"..string.lower(arguments[2])
+		getSong = "https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/others/sing/"..string.lower(arguments[2])
 	else
 		getSong = arguments[2]
 	end
@@ -9916,7 +9916,7 @@ end
 
 function useCommand.antiwrldsgui()
 	opx("-","antiwrldsGUI loading")
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/antiwrldsgui/main.lua'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/others/antiwrldsgui/main.lua'),true))()
 	opx("-","antiwrldsGUI loaded")
 end
 
@@ -12800,7 +12800,7 @@ function useCommand.directjoin()
 	end
 end
 
-pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/depthoffield.lua",true))() end)
+pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/others/depthoffield.lua",true))() end)
 -- Thanks to MrAsyncRoblox on github, full credits.
 
 function useCommand.timedcmd()
@@ -13370,7 +13370,7 @@ end
 
 function useCommand.spotify()
 	opx("-","Spotify Premium is needed to run Spotify Presence")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/projects/spotify.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/projects/spotify.lua"))()
 end
 
 function useCommand.friendjoin()
@@ -13531,7 +13531,7 @@ end
 
 function useCommand.sentinelexplorer()
 	opx("-","Loading SENTINEL DEX")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/others/sdex.lua", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/msdks228/CMD-X-qfork/master/others/sdex.lua", true))()
 	opx("-","Loaded SENTINEL DEX")
 end
 
@@ -14476,7 +14476,7 @@ function useCommand.rejoinexecute()
 	syn.queue_on_teleport([[
 		game:GetService('ReplicatedFirst'):RemoveDefaultLoadingScreen()
 		repeat wait(.1) until game:GetService('Players').LocalPlayer
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/Source", true))()
 	]])
 	opx("-","Rejoining game")
 	game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, cmdp)
@@ -14992,7 +14992,7 @@ function useCommand.rejoinrefreshexecute()
 			end)
 			playeradded:Disconnect()
 		end)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/Source", true))()
 	]], c.X, c.Y, c.Z))
 	opx("-","Rejoining game")
 	game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, cmdp)
@@ -16541,9 +16541,9 @@ for _,v in pairs(cmdp:GetPlayers()) do
 	elseif Donors[v.Name] then
 		opx("-",v.Name.." is in your server ("..Tier[Donors[v.Name]].Tag..")")
 		colorName(v)
-	elseif qdev[v.name] then
+--[[ 	elseif qdev[v.name] then
 		opx("-",v.Name.." is in your server ("..Devs[v.Name].." of CMD-X_qfork)")
-		colorqdev(v)
+		colorqdev(v)  i dont wanna use this just yet as i am figuring out how to adapt this]]
 	end
 end
 
