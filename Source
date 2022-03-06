@@ -27,7 +27,7 @@ end
 
 if game:GetService("UserInputService").VREnabled then
 	getParent = Parents[3]
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/master/projects/nexus_support.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska229/CMD-X-qfork/master/projects/nexus_support.lua"))()
 end
 
 Unnamed = Instance.new("ScreenGui", getParent)
@@ -16300,7 +16300,7 @@ elseif dStyle == "blended" then
 	output.Style = Enum.FrameStyle.Custom
 elseif dStyle == "smalled" then
 	output.Style = Enum.FrameStyle.DropShadow
-elseif dStlye == "queen"
+elseif dStlye == "queen" then
 	entry.BackgroundColor3 = Color3.fromRGB(204, 68, 204)
 	output1.TextColor3 = Color3.fromRGB(1, 1, 1)
 	output2.TextColor3 = Color3.fromRGB(1, 1, 1)
