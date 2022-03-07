@@ -1,0 +1,4 @@
+#editor stuff.
+#even tho i do include the .vscode folder in my global git config,
+#this is still necessary because not all people are smart enough
+.vscode/
