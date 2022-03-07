@@ -17,4 +17,4 @@
 |                |                                                 |
 |                | .cmds                             List commands |
 ----------------------------------------------------------------]]--
-loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/main/Source", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source", true))()
