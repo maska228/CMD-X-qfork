@@ -1,5 +1,5 @@
 # CMD-X-qfork
-#### branch -- dev.
+#### branch -- main.
 Probably the dumbest reason for a fork you could've ever seen, just a few edits to the Source file.
 
 Because i can't figure out theming in CMD-X, i'll just add a few commands here and there.
