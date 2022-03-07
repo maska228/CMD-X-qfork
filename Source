@@ -28,7 +28,7 @@ end
 
 if game:GetService("UserInputService").VREnabled then
 	getParent = Parents[3]
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska229/CMD-X-qfork/" branch "/projects/nexus_support.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska229/CMD-X-qfork/" .. branch .. "/projects/nexus_support.lua"))()
 end
 
 Unnamed = Instance.new("ScreenGui", getParent)
@@ -361,7 +361,7 @@ while not RunDude do wait() end
 
 wait(.5)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Version.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Version.lua",true))()
 if Current and Current.Version ~= ver then
 	Stand("CMD-X is not up to par!","CMD-X cannot run.","","Your version: "..ver,"Current version: "..Current.Version,"Run Anyway",true)
 	while not RunDude do
@@ -3448,7 +3448,7 @@ end
 task.spawn(suggestions_update)
 
 if KeepCMDXOn and syn.queue_on_teleport then
-	syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source"))()')
+	syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source"))()')
 end
 
 rejoining = false
@@ -7175,12 +7175,12 @@ function useCommand.remotespy()
 end
 
 function useCommand.playerstalker()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/projects/PlayerStalkerV2.lua",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/projects/PlayerStalkerV2.lua",true))()
 	opx("-","Loaded PlayerStalker")
 end
 
 function useCommand.badger()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/others/badger.lua",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/others/badger.lua",true))()
 	opx("-","Loaded Badger V2")
 end
 
@@ -7601,7 +7601,7 @@ end
 
 function useCommand.reload()
 	opx("-","Reloading CMD-X...")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source", true))()
 end
 
 function useCommand.partesp()
@@ -8478,7 +8478,7 @@ function useCommand.runafter()
 		opx("-","CMD-X will now run after rejoin")
 		KeepCMDXOn = true
 		if KeepCMDXOn and syn.queue_on_teleport then
-			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source"))()')
+			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source"))()')
 		end
 		updatesaves()
 	elseif arguments[2] == "off" then
@@ -9962,7 +9962,7 @@ end
 
 function useCommand.antiwrldsgui()
 	opx("-","antiwrldsGUI loading")
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/others/antiwrldsgui/main.lua'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/others/antiwrldsgui/main.lua'),true))()
 	opx("-","antiwrldsGUI loaded")
 end
 
@@ -12899,7 +12899,7 @@ function useCommand.directjoin()
 	end
 end
 
-pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/others/depthoffield.lua",true))() end)
+pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/others/depthoffield.lua",true))() end)
 -- Thanks to MrAsyncRoblox on github, full credits.
 
 function useCommand.timedcmd()
@@ -13469,7 +13469,7 @@ end
 
 function useCommand.spotify()
 	opx("-","Spotify Premium is needed to run Spotify Presence")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/projects/spotify.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/projects/spotify.lua"))()
 end
 
 function useCommand.friendjoin()
@@ -14575,7 +14575,7 @@ function useCommand.rejoinexecute()
 	syn.queue_on_teleport([[
 		game:GetService('ReplicatedFirst'):RemoveDefaultLoadingScreen()
 		repeat wait(.1) until game:GetService('Players').LocalPlayer
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source", true))()
 	]])
 	opx("-","Rejoining game")
 	game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, cmdp)
@@ -15091,7 +15091,7 @@ function useCommand.rejoinrefreshexecute()
 			end)
 			playeradded:Disconnect()
 		end)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source", true))()
 	]], c.X, c.Y, c.Z))
 	opx("-","Rejoining game")
 	game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, cmdp)

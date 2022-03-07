@@ -18,4 +18,4 @@
 |                | .cmds                             List commands |
 ----------------------------------------------------------------]]--
 branch = "dev" -- specify the branch, main or dev. main = stable, dev = testing new stuff(dev can just not load sometimes lol)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" branch "/Source", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" + branch + "/Source", true))()
