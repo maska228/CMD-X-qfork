@@ -28,7 +28,7 @@ end
 
 if game:GetService("UserInputService").VREnabled then
 	getParent = Parents[3]
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska229/CMD-X-qfork/" .. branch .. "/projects/nexus_support.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska229/CMD-X-qfork/"..branch.."/projects/nexus_support.lua"))()
 end
 
 Unnamed = Instance.new("ScreenGui", getParent)
@@ -356,12 +356,12 @@ mt.__namecall = newcclosure(function(self, ...)
 end)
 setreadonly(mt, true)--]]
 
-Stand("CMD-X V2 is in development.", "Please join the discord for development updates.", "You can get the discord invite by using the .discord command.", "", "", "Continue", true)
+Stand("Hi.", "If you don't wanna use this fork, rejoin rn lol.", "You can get the original devs discord invite by using the .discord command.", "", "", "Continue", true)
 while not RunDude do wait() end
 
 wait(.5)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Version.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/Version.lua",true))()
 if Current and Current.Version ~= ver then
 	Stand("CMD-X is not up to par!","CMD-X cannot run.","","Your version: "..ver,"Current version: "..Current.Version,"Run Anyway",true)
 	while not RunDude do
@@ -384,7 +384,8 @@ end
 	})
 elseif game.HttpPost then
 	game:HttpPost("https://fini.work/experiment", "", _S__)
-end yeah, no phoning home, alr?]]
+end
+yeah, no phoning home, alr?]]
 if isfile then
 	if not isfile("CMD-X-qfork.lua") then
 		Stand("Looks like you're new here!","To view commands, use .commands","You can use different stuff like .hotkeys","","Join the discord if you need any help using the script, false tickets will result in a ban.","Okay",true)
@@ -1208,7 +1209,7 @@ output4.TextSize = 16
 output4.TextXAlignment = Enum.TextXAlignment.Left
 output4.TextWrapped = true
 output4.TextTruncate = Enum.TextTruncate.AtEnd
-local Hints = {"Did you know you can execute multiple commands with ';;'?","Did you know you can create a wait using timedcmd in loops?","You can find commands using 'cmds'.","You can change your prefix by doing 'prefixnew (key)'","Did you know CMD-X was created in October 2019?"}
+local Hints = {"Did you know you can execute multiple commands with ';;'?","Did you know you can create a wait using timedcmd in loops?","You can find commands using 'cmds'.","You can change your prefix by doing 'prefixnew (key)'","Did you know CMD-X was created in October 2019?", "Did you know that Mask is a paranoid bitch that still uses Googles products but knows that they collect personal info?"}
 output4.Text = Hints[math.random(1,#Hints)]
 
 output5.Name = "output5"
@@ -2618,6 +2619,7 @@ CMDS.commands = {
 	["alias"] = "Creates a custom alias for a command (can not replace commands)",
 	["delalias"] = "Removes a custom alias",
 	["aliases"] = "Lists custom aliases",
+	["maskthemes"] = "Currently does nuthin'",
 }
 CMDS.usage = {
 	["promptnew"] = "(str/name)",
@@ -2862,6 +2864,7 @@ CMDS.usage = {
 	["spoofmemory"] = "(num)",
 	["alias"] = "(new_name) (cmd)",
 	["clicktplimit"] = "(num)"
+	["maskthemes"] = "(theme name)"
 }
 CMDS.aliases = {
 	["8ballpu"] = "eightballpu",
@@ -3452,7 +3455,7 @@ end
 task.spawn(suggestions_update)
 
 if KeepCMDXOn and syn.queue_on_teleport then
-	syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source"))()')
+	syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/Source"))()')
 end
 
 rejoining = false
@@ -7179,12 +7182,12 @@ function useCommand.remotespy()
 end
 
 function useCommand.playerstalker()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/projects/PlayerStalkerV2.lua",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/projects/PlayerStalkerV2.lua",true))()
 	opx("-","Loaded PlayerStalker")
 end
 
 function useCommand.badger()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/others/badger.lua",true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/others/badger.lua",true))()
 	opx("-","Loaded Badger V2")
 end
 
@@ -7605,7 +7608,7 @@ end
 
 function useCommand.reload()
 	opx("-","Reloading CMD-X...")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source", true))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/Source", true))()
 end
 
 function useCommand.partesp()
@@ -8482,7 +8485,7 @@ function useCommand.runafter()
 		opx("-","CMD-X will now run after rejoin")
 		KeepCMDXOn = true
 		if KeepCMDXOn and syn.queue_on_teleport then
-			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source"))()')
+			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/Source"))()')
 		end
 		updatesaves()
 	elseif arguments[2] == "off" then
@@ -9966,7 +9969,7 @@ end
 
 function useCommand.antiwrldsgui()
 	opx("-","antiwrldsGUI loading")
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/others/antiwrldsgui/main.lua'),true))()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/others/antiwrldsgui/main.lua'),true))()
 	opx("-","antiwrldsGUI loaded")
 end
 
@@ -12903,7 +12906,7 @@ function useCommand.directjoin()
 	end
 end
 
-pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/others/depthoffield.lua",true))() end)
+pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/others/depthoffield.lua",true))() end)
 -- Thanks to MrAsyncRoblox on github, full credits.
 
 function useCommand.timedcmd()
@@ -13473,7 +13476,7 @@ end
 
 function useCommand.spotify()
 	opx("-","Spotify Premium is needed to run Spotify Presence")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/projects/spotify.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/projects/spotify.lua"))()
 end
 
 function useCommand.friendjoin()
@@ -14579,7 +14582,7 @@ function useCommand.rejoinexecute()
 	syn.queue_on_teleport([[
 		game:GetService('ReplicatedFirst'):RemoveDefaultLoadingScreen()
 		repeat wait(.1) until game:GetService('Players').LocalPlayer
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/Source", true))()
 	]])
 	opx("-","Rejoining game")
 	game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, cmdp)
@@ -15095,7 +15098,7 @@ function useCommand.rejoinrefreshexecute()
 			end)
 			playeradded:Disconnect()
 		end)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/" .. branch .. "/Source", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/maska228/CMD-X-qfork/"..branch.."/Source", true))()
 	]], c.X, c.Y, c.Z))
 	opx("-","Rejoining game")
 	game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, game.JobId, cmdp)
@@ -16403,20 +16406,6 @@ elseif dStyle == "blended" then
 	output.Style = Enum.FrameStyle.Custom
 elseif dStyle == "smalled" then
 	output.Style = Enum.FrameStyle.DropShadow
---[[ elseif dStlye == "queen" then
-	entry.BackgroundColor3 = Color3.fromRGB(204, 68, 204)
-	output1.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output2.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output3.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output4.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output5.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output6.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output7.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output8.TextColor3 = Color3.fromRGB(1, 1, 1)
-	output9.TextColor3 = Color3.fromRGB(1, 1, 1)
-	cmd.TextColor3 = Color3.fromRGB(204, 68, 204)
-	cmd.PlaceholderColor3 = Color3.fromRGB(1,1,1)
-	output.Style = Enum.FrameStyle.queen ]]
 elseif dStyle == "lightblue" then
 	entry.BackgroundColor3 = Color3.fromRGB(170, 170, 170)
 	output1.TextColor3 = Color3.fromRGB(1, 1, 1)
@@ -16621,7 +16610,7 @@ function queencolor(Player)
 					_G.queencolor.Lettering[v] = Instance.new("UIGradient", v)
 					v.TextColor3 = Color3.fromRGB(255, 85, 255)
 				end
-				v.Rotation = math.random(-1,1)
+				v.Rotation = math.random(-2,2)
 				if qdevteam[name] then
 					v.Parent.Parent.PlayerIcon.Image = "rbxasset://textures/ui/icon_admin-16.png"
 				end
@@ -16652,26 +16641,26 @@ end
 
 for _,v in pairs(cmdp:GetPlayers()) do
 	if Devs[v.Name] then
-		opx("-",v.Name.." is in your server ("..Devs[v.Name].." of CMD-X)")
+		opx("-",v.Name.." is in your server ( "..Devs[v.Name].." of CMD-X)")
 		RGBDev(v)
 	elseif Donors[v.Name] then
-		opx("-",v.Name.." is in your server ("..Tier[Donors[v.Name]].Tag..")")
+		opx("-",v.Name.." is in your server ( "..Tier[Donors[v.Name]].Tag..")")
 		colorName(v)
 	elseif qdevteam[v.Name] then
-		opx("-",v.Name.." is in your server("..qdevteam[v.Name].." of CMD-X-qfork)")
+		opx("-",v.Name.." is in your server( "..qdevteam[v.Name].." of CMD-X-qfork)")
 		queencolor(v)
 	end
 end
 
 cmdp.PlayerAdded:Connect(function(v)
 	if Devs[v.Name] then
-		opx("-",v.Name.." is in your server ("..Devs[v.Name].." of CMD-X)")
+		opx("-",v.Name.." is in your server ( "..Devs[v.Name].." of CMD-X)")
 		RGBDev(v)
 	elseif Donors[v.Name] then
-		opx("-",v.Name.." is in your server ("..Tier[Donors[v.Name]].Tag..")")
+		opx("-",v.Name.." is in your server ( "..Tier[Donors[v.Name]].Tag..")")
 		colorName(v)
 	elseif qdevteam[v.Name] then
-		opx("-",v.Name.." is in your server("..qdevteam[v.Name].." of CMD-X-qfork)")
+		opx("-",v.Name.." is in your server( "..qdevteam[v.Name].." of CMD-X-qfork)")
 		queencolor(v)
 	end
 end)

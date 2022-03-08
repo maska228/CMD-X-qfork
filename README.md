@@ -7,9 +7,7 @@ Because i can't figure out theming in CMD-X, i'll just add a few commands here a
 Also, i will probably just implement iy's swim command here, because the one in here is just an anim change with float(as far as i can tell) lol.
 # Features:
 - added admin stuff back in from a commit because i can't just have secure forks lol.
-
-
-
+- Removed phoning home functionality. Afaik it only tells the server the exploit you are using, and only if you use Synapse. I still removed it bc i am a paranoid biych lol.
 ## TBA
 - no theme yet, bc im not really good with lua. also i cant figure out if theming actually works in CMD-X.
 
