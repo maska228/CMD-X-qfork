@@ -18,4 +18,4 @@ Also, i will probably just implement iy's swim command here, because the one in 
 # CMD-X
 A ROBLOX admin script with over 600 commands. Under reformation, V2.0.0 coming soon or something I guess.
 
-orig devs Discord: https://discord.gg/JbrnMxXPH4
+Discord: https://discord.gg/JbrnMxXPH4
