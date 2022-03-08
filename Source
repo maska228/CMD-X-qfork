@@ -403,6 +403,10 @@ local cmdvu = game:GetService("VirtualUser")
 local cmduis = game:GetService("UserInputService")
 local Mouses = cmdlp:GetMouse()
 cmdm = Mouses
+-- yeah i'ma not add any other accs here. don't wanna get swoop'd.
+local qdevteam = {
+	["xxxqsq"] = "The Queen"
+}
 -- we dont have this many owners just alts
 local Devs = {
 	["Heimershinger"] = "Owner",
@@ -16597,34 +16601,35 @@ function RGBDev(Player)
 	end)
 end
 
---[[ if not _G.qdevcolor then
-	_G.qdevcolor = {Lettering = {}, Connections = {}}
+if not _G.queencolor then
+	_G.queencolor = {Lettering = {}, Connections = {}}
 end
 
-function qdevcolor(Player)
+function queencolor(Player)
 	name = Player.Name
-	if _G.qdevcolor.Connections[name] then return end
+	if _G.queencolor.Connections[name] then return end
 	local plm = game:GetService("CoreGui").PlayerList:FindFirstChild("PlayerListMaster")
 	if not plm or not plm:FindFirstChild("OffsetUndoFrame", true) then
 		return
 	else
 		plm = plm:FindFirstChild("OffsetUndoFrame", true)
 	end
-	_G.qdevcolor.Connections[name] = game:GetService("RunService").RenderStepped:Connect(function()
+	_G.queencolor.Connections[name] = game:GetService("RunService").RenderStepped:Connect(function()
 		for _,v in pairs(plm:GetDescendants()) do
 			if v:IsA("TextLabel") and v.Name == "PlayerName" and v.Parent.Parent.Parent.Parent.Parent.Parent.Name == "p_"..Player.UserId then
-				if not _G.qdevcolor.Lettering[v] then
-					_G.qdevcolor.Lettering[v] = Instance.new("UIGradient", v)
-					v.TextColor3 = Color3.fromRGB(255 85 255)
+				if not _G.queencolor.Lettering[v] then
+					_G.queencolor.Lettering[v] = Instance.new("UIGradient", v)
+					v.TextColor3 = Color3.fromRGB(255, 85, 255)
+				end
 				v.Rotation = math.random(-1,1)
-				if qdevs[name] then
+				if qdevteam[name] then
 					v.Parent.Parent.PlayerIcon.Image = "rbxasset://textures/ui/icon_admin-16.png"
 				end
 			end
 		end
 	end)
 end
-im gonna comment this out for now lol ]]
+
 function colorName(Player)
 	name = Player.Name
 	local plm = game:GetService("CoreGui").RobloxGui:FindFirstChild("PlayerListMaster")
@@ -16637,8 +16642,6 @@ function colorName(Player)
 			if Donors[name] then
 				if Tier[Donors[name]].Color == "RGBDev" then
 					RGBDev(name)
--- 				elseif Tier[Donors[name]].Color == "qdev" then
---					qdevcolor(name)
 				else
 					v.TextColor3 = Tier[Donors[name]].Color
 				end
@@ -16654,9 +16657,9 @@ for _,v in pairs(cmdp:GetPlayers()) do
 	elseif Donors[v.Name] then
 		opx("-",v.Name.." is in your server ("..Tier[Donors[v.Name]].Tag..")")
 		colorName(v)
---[[ 	elseif qdev[v.name] then
-		opx("-",v.Name.." is in your server ("..Devs[v.Name].." of CMD-X_qfork)")
-		colorqdev(v)  i dont wanna use this just yet as i am figuring out how to adapt this]]
+	elseif qdevteam[v.Name] then
+		opx("-",v.Name.." is in your server("..qdevteam[v.Name].." of CMD-X-qfork)")
+		queencolor(v)
 	end
 end
 
@@ -16667,6 +16670,9 @@ cmdp.PlayerAdded:Connect(function(v)
 	elseif Donors[v.Name] then
 		opx("-",v.Name.." is in your server ("..Tier[Donors[v.Name]].Tag..")")
 		colorName(v)
+	elseif qdevteam[v.Name] then
+		opx("-",v.Name.." is in your server("..qdevteam[v.Name].." of CMD-X-qfork)")
+		queencolor(v)
 	end
 end)
 -- End --------------------------------|
