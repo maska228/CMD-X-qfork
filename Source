@@ -356,7 +356,7 @@ mt.__namecall = newcclosure(function(self, ...)
 end)
 setreadonly(mt, true)--]]
 
-Stand("Hi.", "If you don't wanna use this fork, rejoin rn lol.", "You can get the original devs discord invite by using the .discord command.", "", "", "Continue", true)
+Stand("Hello there", "This is a fork of the original CMD-X. If you didn't execute this on purpose, check your vision.", "You can get the original CMD-X devs discord invite by using the .discord command.", "sus", "amogus", "Continue", true)
 while not RunDude do wait() end
 
 wait(.5)
